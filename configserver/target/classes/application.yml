@@ -4,18 +4,15 @@ spring:
   application:
     name: configserver
   cloud:
-    bus:
-      trace:
-        enable: true
     config:
       server:
         git:
-          uri: https://github.com/mkl2020/orderingsystem.git #git仓库地址
-
-          searchPaths: config #仓库路径
-          username: mkl2020 #git仓库用户名
-          password: mkl20200223github #git仓库密码
-      label: master #仓库的分支
+          uri: https://github.com/mkl2020/orderingsystem
+          searchPaths:
+          - config
+          username: mkl2020
+          password: mkl20200223github
+      label: master
 eureka:
   client:
     serviceUrl:
